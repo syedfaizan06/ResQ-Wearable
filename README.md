@@ -194,21 +194,6 @@ This is a basic threshold-based prototype algorithm. It has not been demonstrate
 
 The current firmware has not yet been compiled in a clean environment from this repository, so verify the exact library and board package versions before relying on this build guide.
 
-## Validation checklist
-
-Before describing the device as operational for industrial use, record test conditions and measured results for:
-
-- [ ] Sensor detection and real (not simulated) HR/SpO₂/body-temperature readings.
-- [ ] Environmental temperature and humidity comparison against a reference instrument.
-- [ ] GNSS fix availability outdoors and behaviour without satellite reception.
-- [ ] Fall-event false positives and missed events across representative worker movements.
-- [ ] SOS and cancellation behaviour, including button debounce edge cases.
-- [ ] BLE range, disconnect/reconnect handling, packet parsing and alert latency.
-- [ ] Current draw and battery runtime under realistic sampling and radio activity.
-- [ ] Behaviour under vibration, dust, humidity, heat and movement typical of the intended site.
-
-Report measured values with test setup and sample count. Do not publish target values as achieved results.
-
 ## Safety and data considerations
 
 - This prototype is for engineering demonstration and research. It is not certified PPE and does not replace site safety procedures, supervisors, or emergency response systems.
