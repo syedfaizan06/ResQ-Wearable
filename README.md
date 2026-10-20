@@ -18,7 +18,7 @@ The goal is to turn a possible incident into useful information for a response: 
 ## Prototype
 
 <p align="center">
-  <img src="https://github.com/syedfaizan06/ResQ-Wearable/blob/main/images/resq-prototype.png?raw=true" alt="ResQ industrial safety wearable prototype mounted on a wrist, showing its OLED dashboard, ESP32-S3 board, GPS antenna, and sensor modules" width="720" />
+  <img src="https://github.com/syedfaizan06/ResQ-Wearable/blob/main/images/resq-prototype.jpg?raw=true" alt="ResQ industrial safety wearable prototype mounted on a wrist, showing its OLED dashboard, ESP32-S3 board, GPS antenna, and sensor modules" width="480" />
 </p>
 
 *Working bench prototype: ESP32-S3, OLED display, GPS module and sensor breakout boards mounted on a wrist strap for early integration testing.*
@@ -102,7 +102,7 @@ The current wearable firmware uses Arduino C++ and these main libraries:
 - **TinyGPSPlus** — NMEA/GNSS parsing.
 - **ESP32 BLE libraries** — BLE GATT service and notifications.
 
-Install the ESP32 board support and libraries using Arduino IDE's Boards Manager and Library Manager. The actual source file should be kept in this repository under `firmware/wearable/`; the current repository's source layout must be updated to match once the working sketch is committed.
+Install the ESP32 board support and libraries using Arduino IDE's Boards Manager and Library Manager. The current sketch is stored at [`firmware/wearable/resq_wearable.ino`](firmware/wearable/resq_wearable.ino).
 
 ### Pin configuration in the current sketch
 
@@ -185,14 +185,14 @@ This is a basic threshold-based prototype algorithm. It has not been demonstrate
 
 1. Install the Arduino IDE and ESP32 board support.
 2. Install the libraries listed in [Firmware details](#firmware-details).
-3. Place the current wearable sketch in `firmware/wearable/` (once added to the repository).
+3. Open [`firmware/wearable/resq_wearable.ino`](firmware/wearable/resq_wearable.ino).
 4. Select the matching ESP32-S3 board and serial port.
 5. Check GPIO assignments and sensor wiring against [Pin configuration](#pin-configuration-in-the-current-sketch).
 6. Compile and upload the sketch.
 7. Open Serial Monitor at **115200 baud** to inspect initialisation messages and BLE telemetry logs.
 8. Connect a BLE client that supports notifications to the advertised `VitalEdge` device and subscribe to the characteristic.
 
-This setup guide must be verified against the committed source file and exact board package version. There is not yet a reproducible build configuration checked into this repository.
+The current firmware has not yet been compiled in a clean environment from this repository, so verify the exact library and board package versions before relying on this build guide.
 
 ## Validation checklist
 
