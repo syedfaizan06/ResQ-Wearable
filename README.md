@@ -219,7 +219,6 @@ Report measured values with test setup and sample count. Do not publish target v
 
 ## Roadmap
 
-- Replace all simulated HR, SpO₂ and body-temperature values with validated sensor-derived measurements.
 - Add a location-validity flag and robust reconnect/error handling.
 - Improve fall-event classification and validate performance with controlled testing.
 - Implement and test the site-node and LoRa communication path.
