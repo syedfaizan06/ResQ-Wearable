@@ -45,21 +45,6 @@ The aim is to give responders useful incident context rather than only an alarm.
 | SSD1306-compatible 128 × 64 OLED | Local status and event countdown |
 | Push button and buzzer | SOS, cancellation, and local alert |
 
-## System overview
-
-```text
- MAX30102   MPU6050   TMP117   AHT10   NEO-6M
-     \         |        |       |       /
-              ESP32-S3 wearable
-              /       |        \
-         Fall/SOS   OLED+buzzer  BLE
-                                  |
-                          Phone / dashboard
-
- Planned integration: wearable <-> site node <-> LoRa <-> safety hub
-```
-
-The current sketch does **not** implement the end-to-end LoRa link or central safety hub. These remain planned system-level features. No UWB-based functionality is part of this project description.
 
 ## Firmware and setup
 
