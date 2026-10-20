@@ -111,7 +111,7 @@ HR,SpO2,BodyTemp,EnvTemp,Humidity,Risk,RiskScore,SOS,Latitude,Longitude
 
 ## Next steps
 
-- Replace simulated values with real, validated HR, SpO₂ and TMP117 readings.
+- Designing a compact PCB with all sensors integrated into it.
 - Add explicit GNSS-validity reporting and robust BLE reconnect handling.
 - Test fall-event behaviour and measure false positives, missed events, and alert latency.
 - Implement the site-node and LoRa communication path and central monitoring interface.
