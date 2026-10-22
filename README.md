@@ -61,19 +61,6 @@ The sketch uses Arduino C++ and these libraries:
 
 To build, install the ESP32 board support and libraries in Arduino IDE, open the sketch above, select the matching ESP32-S3 board and port, then compile and upload. Use Serial Monitor at **115200 baud** for logs. A BLE client must connect to the device advertised as `VitalEdge` and subscribe to its notify characteristic.
 
-### Pin mapping in the current sketch
-
-| Function | Pin / interface |
-|---|---|
-| Main I²C SDA / SCL | GPIO 8 / GPIO 9 |
-| AHT10 I²C SDA / SCL | GPIO 1 / GPIO 2 |
-| GNSS UART RX / TX | GPIO 44 / GPIO 43 |
-| Buzzer | GPIO 7 |
-| Button | GPIO 6 |
-| OLED address | `0x3C` |
-| TMP117 address | `0x49` |
-
-The OLED, MPU6050, TMP117 and optical sensor use `Wire`; the AHT10 uses `Wire1`. Verify pin availability and module voltage requirements for your exact board before connecting hardware.
 
 ## Emergency logic
 
