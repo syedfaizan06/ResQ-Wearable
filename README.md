@@ -69,17 +69,6 @@ To build, install the ESP32 board support and libraries in Arduino IDE, open the
 
 This is a basic threshold-based algorithm and has not been validated for industrial fall detection. False alarms and missed events are possible.
 
-## Implementation status and limitations
-
-The current sketch includes AHT10 readings, MPU6050 threshold logic, button handling, OLED feedback, buzzer timing, BLE advertising/notifications, and GNSS serial parsing.
-
-**Important:** HR and SpO₂ values are currently simulated in the code. The TMP117 is initialised, but the displayed body-temperature value is also simulated. The risk score is a simple rule-based indicator that escalates for an active SOS or pending fall; it is **not a trained TinyML model**. GNSS fallback coordinates may be sent when no valid fix exists, so the current payload should not be treated as verified location in that case.
-
-The current firmware's BLE telemetry is a comma-separated record sent about every two seconds:
-
-```text
-HR,SpO2,BodyTemp,EnvTemp,Humidity,Risk,RiskScore,SOS,Latitude,Longitude
-```
 
 ## Next steps
 
